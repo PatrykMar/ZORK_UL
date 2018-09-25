@@ -9,7 +9,7 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    //ciWin = new CharInfoWindow;
+    ciWin = new CharInfoWindow;
     startButton = new QPushButton("Start", this);
     startButton->setGeometry(QRect(QPoint(100, 100),QSize(200, 50)));
 
@@ -26,8 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::startHandler()
 {
-    //ciWin->setFixedSize(400,400);
-    //ciWin->show();
+    ciWin->setFixedSize(400,400);
+    ciWin->show();
     close();
 }
 

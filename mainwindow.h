@@ -25,6 +25,7 @@ private:
     QPushButton *startButton;
     QPushButton *exitButton;
     QPushButton *scoreboard;
+
 };
 
 #endif // MAINWINDOW_Hs
