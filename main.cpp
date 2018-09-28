@@ -8,5 +8,7 @@ int main(int argc, char *argv[])
     w.setFixedSize(400,400);
     w.show();
 
-    return a.exec();
+    a.exec();
+    return 0;
+
 }

@@ -45,5 +45,5 @@ void MainWindow::scoreHandler()
 MainWindow::~MainWindow() {
     delete startButton;
     delete exitButton;
-   // delete ciWin;
+    delete ciWin;
 }

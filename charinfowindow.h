@@ -7,8 +7,8 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <string>
-//need to include header with the game window
-
+#include "playwindow.h"
+using namespace std;
 namespace Ui {
     class CharInfoWindow;
 
@@ -21,7 +21,6 @@ namespace Ui {
      public:
         explicit CharInfoWindow(QWidget *parent = 0);
         string getName();
-        string getSur();
         ~CharInfoWindow();
 
     private slots:
@@ -29,15 +28,13 @@ namespace Ui {
         bool validateText(QString toValidate);
 
     private:
-        QGridLayout *txtlayout;
+        PlayWindow *playWin;
+        QGridLayout *txtLayout;
         QLineEdit *nameBox;
         QLineEdit *surBox;
         QPushButton *submitButton;
         QLabel *askName;
-        QLabel *askSur;
         QLabel *error;
         string name;
-        string sur;
-    }
-
+    };
 #endif // CHARINFOWINDOW_H

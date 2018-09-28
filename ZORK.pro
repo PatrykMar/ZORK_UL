@@ -28,11 +28,21 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     dbmanager.cpp \
-    charinfowindow.cpp
+    charinfowindow.cpp \
+    player.cpp \
+    item.cpp \
+    character.cpp \
+    zorkul.cpp
 
 HEADERS += \
         mainwindow.h \
-    charinfowindow.h
+    charinfowindow.h \
+    player.h \
+    item.h \
+    character.h \
+    playwindow.h \
+    zorkul.h \
+    room.h
 
 FORMS += \
         mainwindow.ui

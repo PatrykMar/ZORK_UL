@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QPushButton>
+#include "charinfowindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,7 @@ private:
     QPushButton *startButton;
     QPushButton *exitButton;
     QPushButton *scoreboard;
+    CharInfoWindow *ciWin;
 
 };
 
