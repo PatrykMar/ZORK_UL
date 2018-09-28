@@ -2,28 +2,28 @@
 #define ZORKUL_H
 
 
-/*#include <string>
+#include <string>
 #include "character.h"
 #include "player.h"
-//#include "room.h";
+#include "room.h"
 
 using namespace std;
 
 class ZorkUL{
     friend class PlayWindow;
 private:
-    room *currentRoom;
-    vector <room*> roomList;
+    Room *currentRoom;
+    vector <Room*> roomList;
     void createRooms();
     void goRoom(string direction);
-    player *me
+    Player *me;
 
-    public:
-        ZorkUL(string name);
+public:
+    ZorkUL(string name);
     ~ZorkUL();
-    void play();
-    room* getCurrentRoom() const;
-    player* getPlayer() const;
-};*/
+        void play();
+    Room* getCurrentRoom() const;
+    Player* getPlayer() const;
+};
 
 #endif // ZORKUL_H

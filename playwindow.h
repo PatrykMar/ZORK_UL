@@ -13,7 +13,7 @@
 #include <QString>
 #include "ZorkUL.h"
 //#include "finalwindow.h"
-//#include "battle.h"
+#include "battle.h"
 
 using namespace std;
 namespace  Ui{

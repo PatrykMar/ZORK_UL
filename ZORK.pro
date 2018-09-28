@@ -32,7 +32,9 @@ SOURCES += \
     player.cpp \
     item.cpp \
     character.cpp \
-    zorkul.cpp
+    zorkul.cpp \
+    room.cpp \
+    battle.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,7 +44,8 @@ HEADERS += \
     character.h \
     playwindow.h \
     zorkul.h \
-    room.h
+    room.h \
+    battle.h
 
 FORMS += \
         mainwindow.ui
