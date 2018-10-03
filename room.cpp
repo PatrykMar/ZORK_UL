@@ -1,7 +1,7 @@
 #include <sstream>
 #include <QString>
 #include <algorithm>
-#include "Room.h"
+#include "room.h"
 #include "battle.h"
 using namespace std;
 
@@ -83,7 +83,7 @@ Item* Room::getItemByName(string itemName) { //used
     return itemsInRoom[index];
 }
 
-void Room::addMonster(Enemy *ene){
+void Room::addEnemy(Enemy *ene){
     this->enemyInRoom = ene;
 }
 
@@ -91,7 +91,7 @@ Enemy* Room::getEnemyInRoom() const{
     return enemyInRoom;
 }
 
-void Room::deleteMonsterInRoom(){
+void Room::deleteEnemyInRoom(){
     delete this->enemyInRoom;
 }
 
@@ -103,7 +103,7 @@ void Room::removeItem(Item *item){
     itemsInRoom.erase( std::remove(itemsInRoom.begin(), itemsInRoom.end(), item), itemsInRoom.end());
 }
 
-void Room::setNullMonster(){
+void Room::setNullEnemy(){
     this->enemyInRoom = NULL;
 }
 

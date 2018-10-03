@@ -1,4 +1,4 @@
-#include "ZorkUL.h"
+#include "zorkul.h"
 #include "playwindow.h"
 
 ZorkUL::ZorkUL(string name){
@@ -29,7 +29,7 @@ void ZorkUL::createRooms()  {
     currentRoom = one;
 }
 
-void ZorkUL::goRoom(strign direction){
+void ZorkUL::goRoom(string direction){
     // This function moves the current room pointer to the next room,
     // depending on the string direction passed to it
         Room* nextRoom = currentRoom->nextRoom(direction);

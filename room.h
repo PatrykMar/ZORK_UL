@@ -33,10 +33,10 @@ public:
     Item* getItemByName(std::string itemName);
     void addEnemy(Enemy *Enemy);
     Enemy* getEnemyInRoom() const;
-    void deleteMonsterInRoom();
+    void deleteEnemyInRoom();
     std::vector <Item*> getItemsInRoom()const;
     void removeItem(Item *item);
-    void setNullMonster();
+    void setNullEnemy();
     void setLast();
     bool getLast()const;
 };

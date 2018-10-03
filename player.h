@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "item.h"
-#include "Character.h"
+#include "character.h"
 
 class Player : public Character
 {

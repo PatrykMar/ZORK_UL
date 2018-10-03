@@ -55,7 +55,7 @@ bool CharInfoWindow::validateText(QString toValidate)
 {
     bool valid = false;
 
-    QRegExp val("[A-Za-z}");
+    QRegExp val("[A-Za-z]*");
     QRegExpValidator validator(val,0);
     int pos = 0;
     string validText;
@@ -74,4 +74,5 @@ CharInfoWindow::~CharInfoWindow()
     delete submitButton;
     delete askName;
     delete error;
+    delete playWin;
 }
