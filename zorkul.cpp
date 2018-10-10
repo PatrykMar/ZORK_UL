@@ -8,7 +8,6 @@ ZorkUL::ZorkUL(string name){
 
 void ZorkUL::createRooms()  {
 //This function creates all the rooms, objects and monsters in the game
-    //Item *knife = new Item("Knife", true);
     Item *sword = new Item("Sword", true);
 
     Room *one, *two, *three;

@@ -1,0 +1,20 @@
+#include "ZorkUL.h"
+#include "playwindow.h"
+
+ZorkUL::ZorkUL(string name){
+    me = new Player(name, 10, .75);
+	createRooms();
+}
+
+void ZorkUL::createRooms()  {
+//This function creates all the rooms, objects and monsters in the game
+    Item *knife = new Item("Knife", true);
+    Item *sword = new Item("Sword", true);
+    
+    Room *one, *two, *three;
+    one = new Room("one");
+    two = new Room("two");
+    three = new Room("three");
+    
+    roomList.push_
+   } 
