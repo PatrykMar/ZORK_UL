@@ -10,21 +10,31 @@ void ZorkUL::createRooms()  {
 //This function creates all the rooms, objects and monsters in the game
     Item *sword = new Item("Sword", true);
 
-    Room *one, *two, *three;
+    Room *one, *two, *three,*four,*five,*six;
     one = new Room("one");
     two = new Room("two");
     three = new Room("three");
+    four = new Room("four");
+    five = new Room("five");
+    six = new Room("six");
+
 
     roomList.push_back(one);
     roomList.push_back(two);
     roomList.push_back(three);
-    three -> setLast();
+    roomList.push_back(four);
+    roomList.push_back(five);
+    roomList.push_back(six);
+    six -> setLast();
 
     one->addItem(sword);
     two->addEnemy(new Enemy("Enemy",10,.80));
                //north,south,east,west
     one->setExits(NULL,two,NULL,NULL);
     two->setExits(one,NULL,three,NULL);
+    three->setExits(one,four,three,six);
+    four->setExits(one,NULL,three,three);
+    five->setExits(one,NULL,three,NULL);
     currentRoom = one;
 }
 

@@ -1,7 +1,7 @@
 #ifndef ZORKUL_H
 #define ZORKUL_H
 
-
+#include <iostream>
 #include <string>
 #include "character.h"
 #include "player.h"
@@ -21,7 +21,7 @@ private:
 public:
     ZorkUL(string name);
     ~ZorkUL();
-        void play();
+    void play();
     Room* getCurrentRoom() const;
     Player* getPlayer() const;
 };

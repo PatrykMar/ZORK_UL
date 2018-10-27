@@ -79,9 +79,5 @@ private:
     FinalWindow *fw;
     Battle *battle;
 
-/*protected:
-    void keyPressEvent(QKeyEvent *event);
-*/
 };
-
 #endif // PLAYWINDOW_H

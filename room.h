@@ -3,6 +3,7 @@
 
 #include <map>
 #include <QString>
+#include <string>
 #include <vector>
 #include <QPushButton>
 #include "item.h"
@@ -25,7 +26,7 @@ public:
     Room(std::string description);
     void setExits(Room *north,Room *south,Room *east,Room *west);
     std::string getName();
-    Room* nextRoom(std:: string direction);
+    Room* nextRoom(std::string direction);
     void addItem(Item *inItem);
     std::string displayItem();
     std::string getItems();

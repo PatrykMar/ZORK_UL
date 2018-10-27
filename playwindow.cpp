@@ -112,10 +112,10 @@ PlayWindow::PlayWindow(QWidget *parent)
     connect(weaponButton, SIGNAL (clicked()), this, SLOT (weaponHandler()));
     connect(sword, SIGNAL (toggled(bool)), signalMapperWeapon, SLOT (map()));
 
-    signalMapperDirection->setMapping(leftButton, "left");
-    signalMapperDirection->setMapping(rightButton, "right");
-    signalMapperDirection->setMapping(upButton, "up");
-    signalMapperDirection->setMapping(downButton, "down");
+    signalMapperDirection->setMapping(leftButton, "west");
+    signalMapperDirection->setMapping(rightButton, "east");
+    signalMapperDirection->setMapping(upButton, "north");
+    signalMapperDirection->setMapping(downButton, "south");
     signalMapperWeapon->setMapping(sword, "Sword");
 
     connect(signalMapperDirection, SIGNAL(mapped(QString)), this, SLOT(directionSelected(QString)));
