@@ -11,15 +11,26 @@ void Battle::engageBattle(ZorkUL *playGame){
     Room *room = playGame->getCurrentRoom();
     Enemy *ene = room->getEnemyInRoom();
 
-    double hit ((double)rand()/(RAND_MAX));
+    double hit ((double)rand()/(RAND_MAX + 1.0));
 
-    int monsterStrength = 1;
-    int playerStrength = 1;
+    int monsterStrength = ene->getStrength();
+    int playerStrength = me->getStrength();
 
-    if(me->getCurrentItem()=="Sword"){
-        monsterStrength = 2;
-        playerStrength = 4;
+    if(me->getCurrentItem()=="Fist"){
+        playerStrength = 1;
     }
+    else if(me->getCurrentItem()=="Sword"){
+        playerStrength = 3;
+    }
+    else if(me->getCurrentItem()=="Knife"){
+        playerStrength = 2;
+    }
+    else if(me->getCurrentItem()=="Axe")
+    {
+        playerStrength = 5;
+    }
+
+
 
     int myHealth = me->getHealth();
     int eneHealth = ene->getHealth();
@@ -29,9 +40,6 @@ void Battle::engageBattle(ZorkUL *playGame){
     }
     if(hit >= ene->getHitChance()){
         me->setHealth(myHealth-monsterStrength);
-    }
-    if(me->getHealth()<=0){
-        endGame();
     }
   }
     void Battle::endGame(){

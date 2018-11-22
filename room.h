@@ -9,36 +9,42 @@
 #include "item.h"
 #include "enemy.h"
 
+using namespace std;
+
 class Room{
 
 private:
-    std::string name;
-    std::map<std::string,Room*> exits;
-    std::string extiString();
-    std::vector <Item*> itemsInRoom;
+    string name;
+    string text;
+    map<string,Room*> exits;
+    string exitString();
+    vector <Item*> itemsInRoom;
     Enemy *enemyInRoom;
     bool foundExit;
 
 public:
     ~Room();
     int numOfItems();
-    Room(std::string description,Item *item);
-    Room(std::string description);
+    Room(string description,Item *item);
+    Room(string description);
+    Room(string description,string text);
     void setExits(Room *north,Room *south,Room *east,Room *west);
-    std::string getName();
-    Room* nextRoom(std::string direction);
+    string getName();
+    Room* nextRoom(string direction);
     void addItem(Item *inItem);
-    std::string displayItem();
-    std::string getItems();
-    int getItemIndexByName(std::string itemName);
-    Item* getItemByName(std::string itemName);
+    string displayItem();
+    string getItems();
+    int getItemIndexByName(string itemName);
+    Item* getItemByName(string itemName);
     void addEnemy(Enemy *Enemy);
     Enemy* getEnemyInRoom() const;
     void deleteEnemyInRoom();
-    std::vector <Item*> getItemsInRoom()const;
+    vector <Item*> getItemsInRoom()const;
     void removeItem(Item *item);
     void setNullEnemy();
     void setLast();
     bool getLast()const;
+    void setText(string text);
+    string getText()const;
 };
 #endif // ROOM_H

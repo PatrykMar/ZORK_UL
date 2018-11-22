@@ -6,11 +6,19 @@ Character::Character(){}
 
 Character::~Character(){}
 
-Character::Character(string name,int health,double hitChance) : name(name),health(health)
-  ,hitChance(hitChance){}
+Character::Character(string name,string desc,int health,int strength,double hitChance) : name(name),desc(desc),health(health)
+  ,strength(strength),hitChance(hitChance){}
 
 string Character::getName()const{
     return this->name;
+}
+
+string Character::getDesc()const{
+    return this->desc;
+}
+
+int Character::getStrength()const{
+    return this->strength;
 }
 
 double Character::getHitChance()const{

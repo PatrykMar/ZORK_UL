@@ -19,7 +19,7 @@ namespace Ui {
         Q_OBJECT
 
      public:
-        explicit CharInfoWindow(QWidget *parent = 0);
+        explicit CharInfoWindow(QWidget *parent = nullptr);
         string getName();
         ~CharInfoWindow();
 
