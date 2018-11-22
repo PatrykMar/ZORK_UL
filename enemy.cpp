@@ -5,5 +5,5 @@ Enemy::Enemy(){}
 
 Enemy::~Enemy(){}
 
-Enemy::Enemy(string newName,int newHealth,double newHitChance)
-    : Character(newName,newHealth,newHitChance){}
+Enemy::Enemy(string newName,string enemyDesc,int newHealth,int strength,double newHitChance)
+    : Character(newName,enemyDesc,newHealth,strength,newHitChance){}

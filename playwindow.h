@@ -11,6 +11,7 @@
 #include <QGroupBox>
 #include <QComboBox>
 #include <QString>
+#include <QKeyEvent>
 #include "zorkul.h"
 #include "finalwindow.h"
 #include "battle.h"
@@ -24,9 +25,9 @@ class PlayWindow : public QMainWindow
 {
     Q_OBJECT
 public:
+    explicit PlayWindow(QWidget *parent = nullptr);
     ~PlayWindow();
-    explicit PlayWindow(QWidget *parent = 0);
-    void setName(std::string userName);
+    void setName(string userName);
     void setRoom();
     void setHealth(int newHealth);
     string getCommand();
@@ -67,9 +68,13 @@ private:
     QLabel *health;
     QLabel *currRoom;
     QLabel *roomDesc;
+    QLabel *textDesc;
     QLabel *enemyDead;
     QLabel *enemyHealth;
+    QRadioButton *fist;
     QRadioButton *sword;
+    QRadioButton *knife;
+    QRadioButton *axe;
     QComboBox *itemBox;
     QLabel *map;
     bool showMap;
@@ -78,6 +83,7 @@ private:
     QToolBar *toolBar;
     FinalWindow *fw;
     Battle *battle;
+    int healthBoost;
 
 };
 #endif // PLAYWINDOW_H

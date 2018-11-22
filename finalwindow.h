@@ -13,14 +13,14 @@ class FinalWindow : public QMainWindow
 {
     Q_OBJECT
 public:
-    explicit FinalWindow(QWidget *parent = 0);
+    explicit FinalWindow(QWidget *parent = nullptr);
     ~FinalWindow();
     void setMessage(string message);
     string getMessage()const;
 
     signals:
 
-public slots:
+private slots:
     void quitHandler();
 
 private:

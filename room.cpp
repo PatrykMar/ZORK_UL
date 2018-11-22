@@ -5,13 +5,19 @@
 #include "battle.h"
 using namespace std;
 
-Room::Room(string newName) : name(newName), enemyInRoom(NULL), foundExit(false){}
+Room::Room(string newName) : name(newName), enemyInRoom(nullptr), foundExit(false){}
 
 Room::Room(string newName,Item *item){
     name = newName;
     itemsInRoom.push_back(item);
     foundExit = false;
 }
+
+Room::Room(string newName,string newText){
+    name = newName;
+    text = newText;
+}
+
 
 Room::~Room(){
     delete enemyInRoom;
@@ -22,13 +28,13 @@ Room::~Room(){
 }
 
 void Room::setExits(Room *north,Room *south,Room *east,Room *west) {
-    if(north != NULL)
+    if(north != nullptr)
         exits["north"] = north;
-    if(south != NULL)
+    if(south != nullptr)
         exits["south"] = south;
-    if(east != NULL)
+    if(east != nullptr)
         exits["east"] = east;
-    if(west != NULL)
+    if(west != nullptr)
         exits["west"] = west;
 }
 
@@ -38,8 +44,8 @@ string Room::getName(){
 
 Room* Room::nextRoom(string direction){
     map<string, Room*>::iterator next = exits.find(direction);
-    if(next ==exits.end())
-        return NULL;
+    if(next == exits.end())
+        return nullptr;
     return next->second;
 }
 
@@ -104,7 +110,7 @@ void Room::removeItem(Item *item){
 }
 
 void Room::setNullEnemy(){
-    this->enemyInRoom = NULL;
+    this->enemyInRoom = nullptr;
 }
 
 void Room::setLast(){
@@ -113,4 +119,12 @@ void Room::setLast(){
 
 bool Room::getLast()const{
     return this->foundExit;
+}
+
+void Room::setText(string text){
+    this->text = text;
+}
+
+string Room::getText()const{
+    return this->text;
 }

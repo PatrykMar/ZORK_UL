@@ -16,12 +16,9 @@ MainWindow::MainWindow(QWidget *parent)
     exitButton = new QPushButton("Exit", this);
     exitButton->setGeometry(QRect(QPoint(100, 200),QSize(200, 50)));
 
-    scoreboard = new QPushButton("Scoreboard",this);
-    scoreboard->setGeometry(QRect(QPoint(100,200),QSize(200,50)));
 
     connect(startButton, SIGNAL (clicked()), this, SLOT (startHandler()));
     connect(exitButton, SIGNAL (clicked()), this, SLOT (exitHandler()));
-    connect(scoreboard,SIGNAL(clicked()), this,SLOT (scoreHandler()));
 }
 
 void MainWindow::startHandler()
@@ -34,12 +31,6 @@ void MainWindow::startHandler()
 void MainWindow::exitHandler()
 {
     QCoreApplication::quit();
-}
-
-void MainWindow::scoreHandler()
-{
-    close();
-    //Need to call scoreboard window here.
 }
 
 MainWindow::~MainWindow() {

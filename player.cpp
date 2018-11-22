@@ -4,8 +4,8 @@
 using namespace std;
 Player::Player(){}
 
-Player::Player(string newName,int newHealth, double newHitChance) :
-    Character(newName,newHealth,newHitChance) { }
+Player::Player(string newName,string desc,int newHealth,int strength,double newHitChance) :
+    Character(newName,desc,newHealth,strength,newHitChance) { }
 
 Player::~Player(){
 
@@ -26,3 +26,4 @@ void Player::setCurrentItem(Item item){
 Item Player::getCurrentItem()const{
     return currentItem;
 }
+

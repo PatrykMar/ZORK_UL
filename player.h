@@ -5,11 +5,13 @@
 #include "item.h"
 #include "character.h"
 
+using namespace std;
+
 class Player : public Character
 {
 public:
     void addItem(Item *item);
-    Player(std::string name,int health,double hitChance);
+    Player(string name,string desc,int health,int strength,double hitChance);
     Player();
     std::vector <Item*> getItemsInChar()const;
     void setCurrentItem(Item item);
